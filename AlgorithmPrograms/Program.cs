@@ -10,7 +10,7 @@ namespace AlgorithmPrograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("1.)Bubble Sort\n2.)Permutation Combination\n3.)Merge Sort");
+            Console.WriteLine("1.)Bubble Sort\n2.)Permutation Combination\n3.)Merge Sort\n4.)Anagram strings");
             int a = Convert.ToInt32(Console.ReadLine());
 
             switch (a)
@@ -44,6 +44,14 @@ namespace AlgorithmPrograms
                         Console.WriteLine("Elements after sort : ");
                         sort.mergesort(arr, 0, 5);
                         sort.display(arr, 6);
+                        break;
+                    }
+                case 4:
+                    {
+                        Algorithms.Anagram check = new Algorithms.Anagram();
+                        check.isAnagram("Earth","Heart");
+                        check.isAnagram("Hearth", "Hello");
+                        check.isAnagram("aaa", "aaa");
                         break;
                     }
             }
