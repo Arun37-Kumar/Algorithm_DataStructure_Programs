@@ -32,6 +32,7 @@ namespace AlgorithmPrograms.Algorithms
             else
             {
                 Console.WriteLine(s1 + " and " + s2 + " are not anagrams");
+
             }
         }
     }
