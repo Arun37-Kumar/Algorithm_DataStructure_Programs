@@ -10,7 +10,7 @@ namespace AlgorithmPrograms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("1.)Bubble Sort\n2.)Permutation Combination\n3.)Merge Sort\n4.)Anagram strings");
+            Console.WriteLine("1.)Binary Word Search\n2.)Permutation Combination\n3.)Merge Sort\n4.)Anagram strings\n5.)Bubble Sort");
             int a = Convert.ToInt32(Console.ReadLine());
 
             switch (a)
@@ -20,8 +20,9 @@ namespace AlgorithmPrograms
                         // Binary Word Search
                         Algorithms.BinaryWordSearch bin = new Algorithms.BinaryWordSearch();
                         Algorithms.BubbleSort bubble = new Algorithms.BubbleSort();
-                        int[] list = { 12, 22, 10, 02, 66 };
-                        bubble.Sort(list);
+                        string[] list = { "I" , "do", "practice","coding", "everyday" };
+                        string search = "do";
+                        int n = 4;
                         break;
                     }
                 case 2:
@@ -52,6 +53,18 @@ namespace AlgorithmPrograms
                         check.isAnagram("Earth","Heart");
                         check.isAnagram("Hearth", "Hello");
                         check.isAnagram("aaa", "aaa");
+                        break;
+                    }
+                case 5:
+                    {
+                        //Bubble Sort
+                        Algorithms.BubbleSort bubble = new Algorithms.BubbleSort();
+                        int[] list = { 12,23,43,54,11,23,78,09 };
+                        Console.WriteLine("Before Bubble Sorting : ");
+                        bubble.Display(list);
+                        Console.WriteLine("After Bubble Sorting : ");
+                        bubble.Sort(list);
+                        bubble.Display(list);
                         break;
                     }
             }

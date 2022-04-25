@@ -10,6 +10,7 @@ namespace AlgorithmPrograms.Algorithms
     {
         public void Sort(int[] list)
         {
+            //Variable for swapping
             int temp;
 
             //Sort Array
@@ -19,18 +20,24 @@ namespace AlgorithmPrograms.Algorithms
                 {
                     if (list[i] > list[i + 1])
                     {
+                        //Swapping
                         temp = list[i + 1];
                         list[i + 1] = list[i];
                         list[i] = temp;
                     }
                 }
             }
+        }
 
-            Console.WriteLine("Sorted : ");
+        //Display the list
+        public void Display(int[] list)
+        {
             foreach (int item in list)
             {
-                Console.Write(" "+item);
+                Console.Write(" " + item);
             }
+            Console.WriteLine();
         }
+
     }
 }

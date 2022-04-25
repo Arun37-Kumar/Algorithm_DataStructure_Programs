@@ -8,7 +8,8 @@ namespace AlgorithmPrograms.Algorithms
 {
     public class BinaryWordSearch
     {
-
+    
+        
 
     }
 }
