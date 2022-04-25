@@ -10,6 +10,44 @@ namespace AlgorithmPrograms
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("1.)Bubble Sort\n2.)Permutation Combination\n3.)Merge Sort");
+            int a = Convert.ToInt32(Console.ReadLine());
+
+            switch (a)
+            {
+                case 1:
+                    {
+                        // Binary Word Search
+                        Algorithms.BinaryWordSearch bin = new Algorithms.BinaryWordSearch();
+                        Algorithms.BubbleSort bubble = new Algorithms.BubbleSort();
+                        int[] list = { 12, 22, 10, 02, 66 };
+                        bubble.Sort(list);
+                        break;
+                    }
+                case 2:
+                    {
+                        // Permutation and Combination
+                        Console.Write("Enter the string : ");
+                        String inputString = Console.ReadLine();
+                        String answer = "";
+                        Console.Write("\nAll possible strings are : ");
+                        Algorithms.PermutationOfString.permutation(inputString, answer);
+                        break;
+                    }
+                case 3:
+                    {
+                        // Merge Sort
+                        Algorithms.MergeSort sort = new Algorithms.MergeSort();
+                        int[] arr = { 12, 32, 11, 10, 34, 45 };
+                        Console.WriteLine("Elements before sort : ");
+                        sort.display(arr, 6);
+                        Console.WriteLine("Elements after sort : ");
+                        sort.mergesort(arr, 0, 5);
+                        sort.display(arr, 6);
+                        break;
+                    }
+            }
+            Console.ReadLine();
         }
     }
 }
